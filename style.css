@@ -1,0 +1,129 @@
+@font-face{
+  font-family:"Pomeranian-Regular";
+  src:url("C:/Users/eddie/Desktop/Projects/Pomeranian-Regular.ttf");
+}
+harlow{
+  font-family:"Pomeranian-Regular";
+}
+
+body{
+  color: #555;
+  margin: 0;
+}
+
+#header{
+  background-color: #c6e2ff;
+  height: 150px;
+  line-height: : 150px;
+  font-family:"Pomeranian-Regular", sans-sans-serif;
+}
+
+#header a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing:0.1em;
+}
+
+#header a:hover{
+  color:#222;
+}
+
+#header-title{
+  display: block;
+  float: left;
+  font-size:50px;
+  font-weight:bold;
+}
+
+#header-nav{
+  display: block;
+  float: right;
+  margin-top: 0;
+}
+
+#header-nav li{
+  display: inline;
+  padding-left: 20px;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#footer{
+  background-color:#2f2f2f;
+  padding: 50px 0;
+}
+
+.column{
+  min-width:300px;
+  display:inline-block;
+  vertical-align:top;
+}
+
+#footer h4{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing:0.1em;
+}
+
+#footer p{
+  color:white;
+}
+
+a{
+  color:#1abc9c;
+  text-decoration:none;
+}
+a:hover{
+  color:#F6A623;
+}
+
+.post, .about {
+  max-width:800px;
+  margin:0 auto;
+  padding:60px 0;
+}
+
+.about{
+  text-align:center;
+}
+
+.post-author img{
+  width: 60px;
+  height: 50px;
+  border-radius:70%;
+  vertical-align: middle;
+  font-family: "Pomeranian-Regular";
+}
+
+.about-author img{
+  width: 60px;
+  height: 50px;
+  border-radius:70%;
+  vertical-align: middle;
+  font-family: "Pomeranian-Regular";
+}
+
+.post-author span{
+  margin-left: 16px;
+}
+
+.post-date{
+  color:#D2D2D2;
+  font-size:14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: "Pomeranian-Regular";
+}
+
+h1,h2,h3,h4{
+  color:#333;
+  font-family: "Pomeranian-Regular";
+}
+p{
+  line-height:1.5;
+}

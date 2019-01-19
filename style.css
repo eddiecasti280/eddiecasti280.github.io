@@ -6,6 +6,11 @@ harlow{
   font-family:"Pomeranian-Regular";
 }
 
+@font-face{
+  font-family:"JKG";
+  scr:url("C:/Users/eddie/Desktop/Projects/JKG-M_3.ttf")
+}
+
 body{
   color: #555;
   margin: 0;
@@ -73,15 +78,32 @@ body{
   color:white;
 }
 
+.bottom-right{
+  position:absolute;
+  bottom:-430px;
+  right:20px;
+  font-family:"Pomeranian-Regular";
+  opacity:0.5;
+}
+
+.bottom-right2{
+  position:absolute;
+  bottom:-430px;
+  right:20px;
+  font-family:"Pomeranian-Regular";
+  opacity:0.5;
+}
+
 a{
   color:#1abc9c;
   text-decoration:none;
 }
-a:hover{
+
+a:active{
   color:#F6A623;
 }
 
-.post, .about {
+.post, .about, .animal {
   max-width:800px;
   margin:0 auto;
   padding:60px 0;
@@ -99,6 +121,10 @@ a:hover{
   font-family: "Pomeranian-Regular";
 }
 
+.post-container:nth-child(even){
+  background-color: #f2f2f2;
+}
+
 .about-author img{
   width: 60px;
   height: 50px;
@@ -107,11 +133,23 @@ a:hover{
   font-family: "Pomeranian-Regular";
 }
 
-.post-author span{
-  margin-left: 16px;
+.animal-author img{
+  width: 60px;
+  height: 50px;
+  border-radius:70%;
 }
 
-.post-date{
+.post-author span{
+  margin-left: 16px;
+  border:3px dotted #c6e2ff;
+}
+
+.animal-author span{
+  margin-left: 16px;
+  border:3px dotted #c6e2ff;
+}
+
+.post-date, .animal-date{
   color:#D2D2D2;
   font-size:14px;
   font-weight: bold;
@@ -120,10 +158,229 @@ a:hover{
   font-family: "Pomeranian-Regular";
 }
 
+.post-content, .word-content, .animal-content{
+  border:2px dotted #c6e2ff;
+}
+
 h1,h2,h3,h4{
   color:#333;
   font-family: "Pomeranian-Regular";
 }
+h1{
+  text-align: center;
+}
+
 p{
   line-height:1.5;
 }
+
+.grid-container{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  grid-gap:1em;
+  grid-auto-rows:minmax(100px,auto);
+}
+
+.maincontainer{
+  perspective:1000px;
+  margin:15px auto;
+  width:250px;
+  height:280px;
+}
+
+.thecard{
+  position: relative;
+  width: 100%;
+  height:100%;
+  transform-style:preserve-3d;
+  transition:all 0.5s ease;
+}
+
+.thecard:active{
+  transform:rotateY(180deg);
+}
+
+.thefront{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: #CBFFFA;
+  color:#333;
+  text-align:center;
+  font-family: "JKG";
+  border-radius:20px;
+  font-size:18px;
+  font-weight: bold;
+}
+
+.theback{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility:hidden;
+  background: #c6e2ff;
+  color:#333;
+  transform: rotateY(180deg);
+  text-align:center;
+  font-family: "JKG";
+  border-radius:20px;
+  font-size:18px;
+  font-weight: bold;
+}
+
+.clock {
+  height: 100px;
+  width: 100px;
+  background-color: #dddddd;
+  border-radius: 100%;
+  border: 3px solid #aaaaaa;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.twelve {
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background: #111111;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.three {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: #111111;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+}
+
+.six {
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background: #111111;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.nine {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: #111111;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+.center {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  background: #000;
+  border-radius: 100%;
+}
+
+#seconds {
+  position: absolute;
+  height: 16px;
+  width: 2px;
+  left: 0;
+  right: 0;
+  bottom: 160px;
+  top: 0px;
+  margin: auto;
+  background: #000;
+  -webkit-transform-origin: bottom;
+  background: #ff4136;
+}
+
+#minutes {
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  left: 0;
+  right: 0;
+  bottom: 200px;
+  top: 0px;
+  margin: auto;
+  background: #000;
+  -webkit-transform-origin: bottom;
+}
+
+#hours {
+  position: absolute;
+  height: 8px;
+  width: 6px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  top: 0px;
+  margin: auto;
+  background: #000;
+  -webkit-transform-origin: bottom;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  font-family:"Pomeranian-Regular", sans-sans-serif;
+  background-color: #c6e2ff;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #c6e2ff;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display:none;
+  position: absolute;
+  background-color: #c6e2ff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #CBFFFA}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

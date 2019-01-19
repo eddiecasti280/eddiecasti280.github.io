@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ぎんこう</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    <div id="header">
+      <div class="container">
+        <a id="header-title" href="index.html" style="color:#CBFFFA">ぎんこう</a>
+        <ul id="header-nav">
+          <li><a href="about.html">About</a></li>
+          <li><div class="dropdown">
+            <button onmouseover="myFunction()" class="dropbtn">JAPANESE</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="japanesevocabulary.html">Vocabulary</a>
+                <a href="katakanaalpha.html">Katakana Alphabet</a>
+                <a href="hiraganaalpha.html">Hiragana Alphabet</a>
+                <a href="particle.html">Particles</a>
+                <a href="sentencestructure.html">Sentence Structure</a>
+              </div>
+          </div></li>
+          <li><a href="mailto:eddiecasti280@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <h1><u style="font-size:180%;">Particles</u></h1>
+    <div class="grid-container">
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">は</div><div class="theback"><br>Indicates sentence topic.<br><br><br><br>-Example-<br>ヘンリー<font color="#ffffff">は</font>アメリカ人です。<br><br>Henry is American.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">か</div><div class="theback"><br>Indicates a question at the end of a sentence.<br><br><br>-Example-<br>今、何時です<font color="ffffff">か</font>。<br><br>What time is it now?</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">が</div><div class="theback"><br>Indicates sencence subject.<br><br><br><br>-Example-<br>ビデオゲーム<font color="ffffff">が</font>大好きです！<br><br>I really like video games!</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">に</div><div class="theback"><br>Indicates location. Used with time.<br><br><br>-Example-<br>七時半<font color="ffffff">に</font>朝ごはんを食べます。<br><br>I eat breakfast at 7:30.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">の</div><div class="theback"><br>Indicates possession.<br><br><br><br>-Example-<br>私<font color="ffffff">の</font>えんぴつがあります。<br><br>My pencil exists.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">へ</div><div class="theback"><br>Indicates direction.<br><br><br><br>-Example-<br>映画館<font color="ffffff">へ</font>行きました。<br><br>I went to the movie theater.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">を</div><div class="theback"><br>Indicates object associated with a verb.<br><br><br>-Example-<br>アイスクリーム<font color="ffffff">を</font>食べました。<br><br>I ate icecream.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">と</div><div class="theback"><br>Indicates noun linkage.<br><br><br><br>-Example-<br>スパゲッティ<font color="ffffff">と</font>パンを食べます。<br><br>I eat spaghetti and bread.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">も</div><div class="theback"><br>Used to replace "は"、"が"、or "を" in scenarios where "also" or "too" would exist.<br><br>-Example-<br>スシーは学生です。私<font color="ffffff">も</font>学生です。<br><br>Susie is a student. I am also a student.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">や</div><div class="theback"><br>Connection and partial listing of multiple entities.<br><br><br>-Example-<br>車<font color="ffffff">や</font>地下鉄は車両です。<br><br>Cars and subways are vehicles.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">で</div><div class="theback"><br>Indicates location of action.<br><br><br><br>-Example-<br>大学<font color="ffffff">で</font>自転車へ行きます。<br><br>I go to the university by bicycle.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">から</div><div class="theback"><br>Starting point of an action.<br><br><br><br>-Example-<br>うち<font color="ffffff">から</font>ゆうびんきょくまで行きました。<br><br>I went from my house to the post office.</div></div></div></div>
+      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">まで</div><div class="theback"><br>Ending point of an action.<br><br><br><br>-Example-<br>うちからゆうびんきょく<font color="ffffff">まで</font>行きました。<br><br>I went from my house to the post office.</div></div></div></div>
+    </div>
+    <p style="text-align:center; font-size:120%"">Where do you place your sentence markers? Learn more <a href="sentencestructure.html">here!</a><img src="ScholarTonberry3.png" height="30" width="30"></p>
+    <div id="footer">
+      <div class="container">
+        <div class="column">
+          <h4>My Links</h4>
+          <p>
+            <a href="https://twitter.com/datboi_eddie">Twitter</a>
+            <br>
+            <a href="https://www.youtube.com/channel/UCD5Wt15r9LN1gbI_qgMGzcQ?view_as=subscriber">YouTube</a>
+          </p>
+        </div>
+        <div class="column">
+          <h4>My Story</h4>
+          <p>
+            Hi there! Please feel free to look around my website to see what I'm up to!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

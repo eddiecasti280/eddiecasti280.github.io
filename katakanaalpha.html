@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ぎんこう</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    <div id="header">
+      <div class="container">
+        <a id="header-title" href="index.html" style="color:#CBFFFA">ぎんこう</a>
+        <ul id="header-nav">
+          <li><a href="about.html">About</a></li>
+          <li><div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">JAPANESE</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="japanesevocabulary.html">Vocabulary</a>
+                <a href="katakanaalpha.html">Alphabets</a>
+                <a href="particle.html">Particles</a>
+                <a href="sentencestructure.html">Sentence Structure</a>
+              </div>
+          </div></li>
+          <li><a href="mailto:eddiecasti280@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bottom-right2"; style="font-size:800%;">ア</p>
+    <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      bottom:100%;
+      left:50%;
+      margin-left:-60px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+    </style>
+    <h1><u style="font-size:90%;">Katakana Alphabet</u></h1>
+    <ul style="list-style-type:none;font-size:105%;">
+      <li align=center><div class="tooltip">ア<span class="tooltiptext">a</span></div>　<div class="tooltip">イ<span class="tooltiptext">i</span></div>　<div class="tooltip">ウ<span class="tooltiptext">u</span></div>　<div class="tooltip">エ<span class="tooltiptext">e</span></div>　<div class="tooltip">オ<span class="tooltiptext">o</span></div></li>
+      <li align=center><div class="tooltip">カ<span class="tooltiptext">ka</span></div>　<div class="tooltip">キ<span class="tooltiptext">ki</span></div>　<div class="tooltip">ク<span class="tooltiptext">ku</span></div>　<div class="tooltip">ケ<span class="tooltiptext">ke</span></div>　<div class="tooltip">コ<span class="tooltiptext">ko</span></div></li>
+      <li align=center><div class="tooltip">サ<span class="tooltiptext">sa</span></div>　<div class="tooltip">シ<span class="tooltiptext">shi</span></div>　<div class="tooltip">ス<span class="tooltiptext">su</span></div>　<div class="tooltip">セ<span class="tooltiptext">se</span></div>　<div class="tooltip">ソ<span class="tooltiptext">so</span></div></li>
+      <li align=center><div class="tooltip">タ<span class="tooltiptext">ta</span></div>　<div class="tooltip">チ<span class="tooltiptext">chi</span></div>　<div class="tooltip">ツ<span class="tooltiptext">tsu</span></div>　<div class="tooltip">テ<span class="tooltiptext">te</span></div>　<div class="tooltip">ト<span class="tooltiptext">to</span></div></li>
+      <li align=center><div class="tooltip">ナ<span class="tooltiptext">na</span></div>　<div class="tooltip">ニ<span class="tooltiptext">ni</span></div>　<div class="tooltip">ヌ<span class="tooltiptext">nu</span></div>　<div class="tooltip">ネ<span class="tooltiptext">ne</span></div>　<div class="tooltip">ノ<span class="tooltiptext">no</span></div></li>
+      <li align=center><div class="tooltip">ハ<span class="tooltiptext">ha</span></div>　<div class="tooltip">ヒ<span class="tooltiptext">hi</span></div>　<div class="tooltip">フ<span class="tooltiptext">hu (fu)</span></div>　<div class="tooltip">ヘ<span class="tooltiptext">he</span></div>　<div class="tooltip">ホ<span class="tooltiptext">ho</span></div></li>
+      <li align=center><div class="tooltip">マ<span class="tooltiptext">ma</span></div>　<div class="tooltip">ミ<span class="tooltiptext">mi</span></div>　<div class="tooltip">ム<span class="tooltiptext">mu</span></div>　<div class="tooltip">メ<span class="tooltiptext">me</span></div>　<div class="tooltip">モ<span class="tooltiptext">mo</span></div></li>
+      <li align=center><div class="tooltip">ヤ<span class="tooltiptext">ya</span></div>　　　<div class="tooltip">ユ<span class="tooltiptext">yu</span></div>　　　<div class="tooltip">ヨ<span class="tooltiptext">yo</span></div></li>
+      <li align=center><div class="tooltip">ラ<span class="tooltiptext">ra</span></div>　<div class="tooltip">リ<span class="tooltiptext">ri</span></div>　<div class="tooltip">ル<span class="tooltiptext">ru</span></div>　<div class="tooltip">レ<span class="tooltiptext">re</span></div>　<div class="tooltip">ロ<span class="tooltiptext">ro</span></div></li>
+      <li align=center><div class="tooltip">ワ<span class="tooltiptext">wa</span></div>　　　　　　　<span class="tooltip">ヲ<span class="tooltiptext">wo</span></div></li>
+      <li align=center><div class="tooltip">ン<span class="tooltiptext">n</span></div>　　　　　　　　</li>
+      <br>
+      <li align=center><div class="tooltip">ガ<span class="tooltiptext">ga</span></div>　<div class="tooltip">ギ<span class="tooltiptext">gi</span></div>　<div class="tooltip">グ<span class="tooltiptext">gu</span></div>　<div class="tooltip">ゲ<span class="tooltiptext">ge</span></div>　<div class="tooltip">ゴ<span class="tooltiptext">go</span></div></li>
+      <li align=center><div class="tooltip">ザ<span class="tooltiptext">za</span></div>　<div class="tooltip">ジ<span class="tooltiptext">ji</span></div>　<div class="tooltip">ズ<span class="tooltiptext">zu</span></div>　<div class="tooltip">ゼ<span class="tooltiptext">ze</span></div>　<div class="tooltip">ゾ<span class="tooltiptext">zo</span></div></li>
+      <li align=center><div class="tooltip">ダ<span class="tooltiptext">da</span></div>　　　　　<div class="tooltip">デ<span class="tooltiptext">de</span></div>　<div class="tooltip">ド<span class="tooltiptext">do</span></div></li>
+      <li align=center><div class="tooltip">バ<span class="tooltiptext">ba</span></div>　<div class="tooltip">ビ<span class="tooltiptext">bi</span></div>　<div class="tooltip">ブ<span class="tooltiptext">bu</span></div>　<div class="tooltip">ベ<span class="tooltiptext">be</span></div>　<div class="tooltip">ボ<span class="tooltiptext">bo</span></div></li>
+      <br>
+      <li align=center><div class="tooltip">パ<span class="tooltiptext">pa</span></div>　<div class="tooltip">ピ<span class="tooltiptext">pi</span></div>　<div class="tooltip">プ<span class="tooltiptext">pu</span></div>　<div class="tooltip">ペ<span class="tooltiptext">pe</span></div>　<div class="tooltip">ポ<span class="tooltiptext">po</span></div></li>
+      <br>
+      <li align=center><div class="tooltip">キャ<span class="tooltiptext">kya</span></div>      　   <div class="tooltip">キュ<span class="tooltiptext">kyu</span></div>     　    <div class="tooltip">キョ<span class="tooltiptext">kyo</span></div></li>
+      <li align=center><div class="tooltip">シャ<span class="tooltiptext">sha</span></div>      　   <div class="tooltip">ジュ<span class="tooltiptext">shu</span></div>      　   <div class="tooltip">ショ<span class="tooltiptext">sho</span></div></li>
+      <li align=center><div class="tooltip">チャ<span class="tooltiptext">cha</span></div>      　   <div class="tooltip">チュ<span class="tooltiptext">chu</span></div>      　   <div class="tooltip">チョ<span class="tooltiptext">cho</span></div></li>
+      <li align=center><div class="tooltip">ニャ<span class="tooltiptext">nya</span></div>      　   <div class="tooltip">ニュ<span class="tooltiptext">nyu</span></div>      　   <div class="tooltip">ニョ<span class="tooltiptext">nyo</span></div></li>
+      <li align=center><div class="tooltip">ヒャ<span class="tooltiptext">hya</span></div>      　   <div class="tooltip">ヒュ<span class="tooltiptext">hyu</span></div>      　   <div class="tooltip">ヒョ<span class="tooltiptext">hyo</span></div></li>
+      <li align=center><div class="tooltip">ミャ<span class="tooltiptext">mya</span></div>      　   <div class="tooltip">ミュ<span class="tooltiptext">myu</span></div>      　   <div class="tooltip">ミョ<span class="tooltiptext">myo</span></div></li>
+      <li align=center><div class="tooltip">リャ<span class="tooltiptext">rya</span></div>      　   <div class="tooltip">リュ<span class="tooltiptext">ryu</span></div>      　   <div class="tooltip">リョ<span class="tooltiptext">ryo</span></div></li>
+      <br>
+      <li align=center><div class="tooltip">ギャ<span class="tooltiptext">gya</span></div>      　   <div class="tooltip">ギュ<span class="tooltiptext">gyu</span></div>      　   <div class="tooltip">ギョ<span class="tooltiptext">gyo</span></div></li>
+      <li align=center><div class="tooltip">ジャ<span class="tooltiptext">ja</span></div>      　   <div class="tooltip">ジュ<span class="tooltiptext">ju</span></div>      　   <div class="tooltip">ジョ<span class="tooltiptext">jo</span></div></li>
+      <li align=center><div class="tooltip">ビャ<span class="tooltiptext">bya</span></div>      　   <div class="tooltip">ビュ<span class="tooltiptext">byu</span></div>      　   <div class="tooltip">ビョ<span class="tooltiptext">byo</span></div></li>
+      <br>
+      <li align=center><div class="tooltip">ピャ<span class="tooltiptext">pya</span></div>      　   <div class="tooltip">ピュ<span class="tooltiptext">pyu</span></div>      　   <div class="tooltip">ピョ<span class="tooltiptext">pyo</span></div></li>
+    </ul>
+    <div id="footer">
+      <div class="container">
+        <div class="column">
+          <h4>My Links</h4>
+          <p>
+            <a href="https://twitter.com/datboi_eddie">Twitter</a>
+            <br>
+            <a href="https://www.youtube.com/channel/UCD5Wt15r9LN1gbI_qgMGzcQ?view_as=subscriber">YouTube</a>
+          </p>
+        </div>
+        <div class="column">
+          <h4>My Story</h4>
+          <p>
+            Hi there! Please feel free to look around my website to see what I'm up to!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

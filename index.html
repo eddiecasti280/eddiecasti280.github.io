@@ -5,27 +5,72 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
     <div id="header">
       <div class="container">
         <a id="header-title" href="index.html" style="color:#CBFFFA">ぎんこう</a>
         <ul id="header-nav">
           <li><a href="about.html">About</a></li>
+          <li><div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">JAPANESE</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="japanesevocabulary.html">Vocabulary</a>
+                <a href="katakanaalpha.html">Alphabets</a>
+                <a href="particle.html">Particles</a>
+                <a href="sentencestructure.html">Sentence Structure</a>
+              </div>
+          </div></li>
           <li><a href="mailto:eddiecasti280@gmail.com">Contact</a></li>
-          <li><a href="settings.html">Settings</a></li>
         </ul>
       </div>
     </div>
+    <h1><u>Home</u></h1>
+      <script type="text/javascript" src="app.js"></script>
     <div id="content">
-      <div class="container">
+      <div class="post-container">
         <div class="post">
           <div class="post-author">
             <img src="blue2.png">
-            <span>Monsieur Bloo</span>
+            <span><strong>Monsieur Bloo</strong></span>
           </div>
-          <p class="post-date">Today</p>
+          <p class="post-date">December 27th, 2018 11:09 AM</p>
+          <h3 class="post-title">Code Sandwich</h3>
+            <div class="post-content">
+              <p> Just had my small peanut butter and banana sandwiches and I'm ready to code and learn more Kanji!</p>
+              <p> Being a lot more organized recently has allowed me to concentrate more on the tasks I've set for myself for this winter break. I hope to enter 2019 with a highly productive lifestyle!</p>
+            </div>
+         </div>
+      </div>
+      <div class="post-container">
+        <div class="post">
+          <div class="post-author">
+            <img src="blue2.png">
+            <span><strong>Monsieur Bloo</strong></span>
+          </div>
+          <p class="post-date">December 26th, 2018 11:39 PM</p>
           <h3 class="post-title">Believe It!</h3>
-          <p> This is my nindo way! Time to charge up my chakra!</p>
-          <p> The website is <em>far</em> from done and I appreciate your support!</p>
+            <div class="post-content">
+              <p> Hello, everyone! Today is the first day I have worked on this website and I'm happy with its progress so far. I learned about types of tags and syntax formatting used in CSS and HTML. I hope to continue understanding these languages and I'd also like to start learning some JavaScript soon so that I can continue making an awesome website!</p>
+              <p> The website is <em>far</em> from done and I appreciate your support!</p>
+            </div>
          </div>
       </div>
     </div>
@@ -42,7 +87,7 @@
         <div class="column">
           <h4>My Story</h4>
           <p>
-            Hi there! I have no idea what to put here.
+            Hi there! Please feel free to look around my website to see what I'm up to!
           </p>
         </div>
       </div>

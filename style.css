@@ -78,6 +78,7 @@ body{
   color:white;
 }
 
+
 .bottom-right{
   position:absolute;
   bottom:-430px;
@@ -90,6 +91,22 @@ body{
   position:absolute;
   bottom:-430px;
   right:20px;
+  font-family:"Pomeranian-Regular";
+  opacity:0.5;
+}
+
+.bottom-right3{
+  position: absolute;
+  bottom: 999px;
+  right: 20px;
+  font-family:"Pomeranian-Regular";
+  opacity:0.5;
+}
+
+.bottom-right4{
+  position: absolute;
+  bottom: -100px;
+  right: 20px;
   font-family:"Pomeranian-Regular";
   opacity:0.5;
 }
@@ -180,6 +197,12 @@ p{
   grid-gap:1em;
   grid-auto-rows:minmax(100px,auto);
 }
+.grid-container1{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-gap:1em;
+  grid-auto-rows:minmax(100px,auto);
+}
 
 .maincontainer{
   perspective:1000px;
@@ -230,113 +253,14 @@ p{
 }
 
 .clock {
-  height: 100px;
-  width: 100px;
-  background-color: #dddddd;
-  border-radius: 100%;
-  border: 3px solid #aaaaaa;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.twelve {
-  position: absolute;
-  width: 3px;
-  height: 15px;
-  background: #111111;
-  left: 0;
-  top: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.three {
-  position: absolute;
-  width: 15px;
-  height: 3px;
-  background: #111111;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto 0;
-}
-
-.six {
-  position: absolute;
-  width: 3px;
-  height: 15px;
-  background: #111111;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.nine {
-  position: absolute;
-  width: 15px;
-  height: 3px;
-  background: #111111;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto 0;
-}
-.center {
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  background: #000;
-  border-radius: 100%;
-}
-
-#seconds {
-  position: absolute;
-  height: 16px;
-  width: 2px;
-  left: 0;
-  right: 0;
-  bottom: 160px;
-  top: 0px;
-  margin: auto;
-  background: #000;
-  -webkit-transform-origin: bottom;
-  background: #ff4136;
-}
-
-#minutes {
-  position: absolute;
-  height: 20px;
-  width: 2px;
-  left: 0;
-  right: 0;
-  bottom: 200px;
-  top: 0px;
-  margin: auto;
-  background: #000;
-  -webkit-transform-origin: bottom;
-}
-
-#hours {
-  position: absolute;
-  height: 8px;
-  width: 6px;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  top: 0px;
-  margin: auto;
-  background: #000;
-  -webkit-transform-origin: bottom;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #ffffff;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
 }
 
 /* Dropdown Button */
@@ -382,5 +306,77 @@ p{
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #CBFFFA}
 
+
+/* Dropdown Button */
+.dropbtn2 {
+  font-family:"Pomeranian-Regular", sans-sans-serif;
+  background-color: #c6e2ff;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn2:hover, .dropbtn2:focus {
+  background-color: #c6e2ff;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content2 {
+  display:none;
+  position: absolute;
+  background-color: #c6e2ff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content2 a:hover {background-color: #CBFFFA}
+
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+.jp{
+  font-size: 18px;
+}
+
+.furigana_enabled{
+  line-height: 2.1em;
+}
+
+.furigana_enabled .word{
+  margin-right: 0.5em;
+  position:relative;
+  top: 0.6em;
+  display: inline-block;
+  white-space: nowrap;
+}
+.furigana_enabled .kanji::before {
+  content: attr(data-reading);
+  color: gray;
+  font-size: 50%;
+  line-height: 1;
+  position: absolute;
+  top: -0.5em;
+  white-space: nowrap;
+}
+.japanese_gothic {
+  font-family: "HiraKakuPro-W3", "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "游ゴシック", YuGothic, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", sans-serif;
+}

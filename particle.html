@@ -23,6 +23,11 @@
         }
       }
     }
+    $(function () {
+      $("#furigana").click(function () {
+        $(".jp").toggleClass("furigana_enabled", this.checked);
+      });
+    });
     </script>
     <div id="header">
       <div class="container">
@@ -45,19 +50,134 @@
     </div>
     <h1><u style="font-size:180%;">Particles</u></h1>
     <div class="grid-container">
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">は</div><div class="theback"><br>Indicates sentence topic.<br><br><br><br>-Example-<br>ヘンリー<font color="#ffffff">は</font>アメリカ人です。<br><br>Henry is American.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">か</div><div class="theback"><br>Indicates a question at the end of a sentence.<br><br><br>-Example-<br>今、何時です<font color="ffffff">か</font>。<br><br>What time is it now?</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">が</div><div class="theback"><br>Indicates sencence subject.<br><br><br><br>-Example-<br>ビデオゲーム<font color="ffffff">が</font>大好きです！<br><br>I really like video games!</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">に</div><div class="theback"><br>Indicates location. Used with time.<br><br><br>-Example-<br>七時半<font color="ffffff">に</font>朝ごはんを食べます。<br><br>I eat breakfast at 7:30.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">の</div><div class="theback"><br>Indicates possession.<br><br><br><br>-Example-<br>私<font color="ffffff">の</font>えんぴつがあります。<br><br>My pencil exists.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">へ</div><div class="theback"><br>Indicates direction.<br><br><br><br>-Example-<br>映画館<font color="ffffff">へ</font>行きました。<br><br>I went to the movie theater.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">を</div><div class="theback"><br>Indicates object associated with a verb.<br><br><br>-Example-<br>アイスクリーム<font color="ffffff">を</font>食べました。<br><br>I ate icecream.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">と</div><div class="theback"><br>Indicates noun linkage.<br><br><br><br>-Example-<br>スパゲッティ<font color="ffffff">と</font>パンを食べます。<br><br>I eat spaghetti and bread.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">も</div><div class="theback"><br>Used to replace "は"、"が"、or "を" in scenarios where "also" or "too" would exist.<br><br>-Example-<br>スシーは学生です。私<font color="ffffff">も</font>学生です。<br><br>Susie is a student. I am also a student.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">や</div><div class="theback"><br>Connection and partial listing of multiple entities.<br><br><br>-Example-<br>車<font color="ffffff">や</font>地下鉄は車両です。<br><br>Cars and subways are vehicles.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">で</div><div class="theback"><br>Indicates location of action.<br><br><br><br>-Example-<br>大学<font color="ffffff">で</font>自転車へ行きます。<br><br>I go to the university by bicycle.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">から</div><div class="theback"><br>Starting point of an action.<br><br><br><br>-Example-<br>うち<font color="ffffff">から</font>ゆうびんきょくまで行きました。<br><br>I went from my house to the post office.</div></div></div></div>
-      <div class="grid-item"><div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">まで</div><div class="theback"><br>Ending point of an action.<br><br><br><br>-Example-<br>うちからゆうびんきょく<font color="ffffff">まで</font>行きました。<br><br>I went from my house to the post office.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:700%;">は</div>
+            <div class="theback">
+              <br>
+              <div class="jp japanese_gothic furigana_enabled">
+                <span class="word" title="noun">
+                  <span class="kanji" data-reading="わたし">私</span>はHEBへ<span class="kanji" data-reading="い">行</span>きます。</span></div>
+                    <br>Topic Marker: I go to HEB.
+                    <br>
+                    <div class="jp japanese_gothic furigana_enabled">
+                      <span class="word" title="noun">
+                        <span class="kanji" data-reading="わたし">私</span>は肉は食べません。
+                    </div>
+                    <br>
+                    Comparison は: I don't eat meat, (but I eat other things.)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:700%;">が</div>
+            <div class="theback">
+              <br>
+              <div class="jp japanese_gothic furigana_enabled">
+                <span class="word" title="noun">
+                  <span class="kanji" data-reading="だれ">誰</span>が<span class="kanji" data-reading="がっこう">学校</span>に<span class="kanji" data-reading="い">行</span>きますか。</span></div>
+                    <br>Subject Marker: Who goes to school?
+                    <br>
+                <div class="jp japanese_gothic furigana_enabled">
+                  <span class="word" title="noun">
+                    <span class="kanji" data-reading="にほんご">日本語</span>が<span class="kanji" data-reading="す">好</span>きです。</span></div>
+                    <br>Object Marker of Adjective: I like Japanese.
+                    <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:700%;">に<br>一</div>
+            <div class="theback">
+              <div class="jp japanese_gothic furigana_enabled">
+                <span class="word" title="noun">
+                  モールに<span class="kanji" data-reading="い">行</span>きます。</span></div>
+              <div class="jp japanese_gothic furigana_enabled">
+                <span class="word" title="noun">
+                  <span class="kanji" data-reading="に">二</span><span class="kanji" data-reading="じ">時</span>にモールに<span class="kanji" data-reading="い">行</span>きます。</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:700%;">に<br>二</div>
+            <div class="theback">
+              <br>Indicates location. Used with time.
+              <br>
+              <br>
+              <br>-Example-
+              <br>七時半
+              <font color="ffffff">に</font>朝ごはんを食べます。<br><br>I eat breakfast at 7:30.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:700%;">へ</div>
+            <div class="theback">
+              <br>
+              <div class="jp japanese_gothic furigana_enabled">
+                <span class="word" title="indicator">
+                  <span class="kanji" data-reading="にほん">日本</span>へ<span class="kanji" data-reading="い">行</span>きます。</div>
+                  <br>
+                  <br>I will go to Japan.
+                </div>
+              </div>
+            </div>
+          </div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:700%;">で</div>
+            <div class="theback">
+              <br>
+              <div class="jp japanese_gothic furigana_enabled">
+                <span class="word" title="noun">
+                  メキシカンレストランでタコスを<span class="kanji" data-reading="た">食</span>べます。</span><font color="ffffff">へ</font><span class="word" title="verb"><span class="kanji"　data-reading="い">行</span>きました。</span></div><br><br>I went to the movie theater.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:700%;">を</div>
+            <div class="theback">
+              <br>Indicates object associated with a verb.
+              <br>
+              <br>
+              <br>-Example-
+              <br>アイスクリーム<font color="ffffff">を</font>
+              <div class="jp japanese_gothic furigana_enabled">
+                <span class="word" title="verb">
+                  <span class="kanji" data-reading="た">食</span>べました。</div><br><br>I ate icecream.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:700%;">と</div>
+              <div class="theback">
+                <br>Indicates noun linkage.
+                <br>
+                <br>
+                <br>
+                <br>-Example-
+                <br>スパゲッティ<font color="ffffff">と</font>パンを食べます。
+                <br>
+                <br>I eat spaghetti and bread.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard"><div class="thefront" style="font-size:700%;">も</div><div class="theback"><br>Used to replace "は"、"が"、or "を" in scenarios where "also" or "too" would exist.<br><br>-Example-<br>スシーは学生です。私<font color="ffffff">も</font>学生です。<br><br>Susie is a student. I am also a student.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">や</div><div class="theback"><br>Connection and partial listing of multiple entities.<br><br><br>-Example-<br>車<font color="ffffff">や</font>地下鉄は車両です。<br><br>Cars and subways are vehicles.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">で</div><div class="theback"><br>Indicates location of action.<br><br><br><br>-Example-<br>大学<font color="ffffff">で</font>自転車へ行きます。<br><br>I go to the university by bicycle.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">から</div><div class="theback"><br>Starting point of an action.<br><br><br><br>-Example-<br>うち<font color="ffffff">から</font>ゆうびんきょくまで行きました。<br><br>I went from my house to the post office.</div></div></div></div>
+      <div class="grid-item">
+        <div class="maincontainer"><div class="thecard"><div class="thefront" style="font-size:700%;">まで</div><div class="theback"><br>Ending point of an action.<br><br><br><br>-Example-<br>うちからゆうびんきょく<font color="ffffff">まで</font>行きました。<br><br>I went from my house to the post office.</div></div></div></div>
     </div>
     <p style="text-align:center; font-size:120%"">Where do you place your sentence markers? Learn more <a href="sentencestructure.html">here!</a><img src="ScholarTonberry3.png" height="30" width="30"></p>
     <div id="footer">

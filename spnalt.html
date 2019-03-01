@@ -22,13 +22,47 @@
           }
         }
       }
+      if (!event.target.matches('.dropbtn2')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content2");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
     }
+    function showTime(){
+      var date = new Date();
+      var h = date.getHours(); // 0 - 23
+      var m = date.getMinutes(); // 0 - 59
+      var s = date.getSeconds(); // 0 - 59
+      var session = "AM";
+      if(h == 0){
+          h = 12;
+        }
+        if(h > 12){
+          h = h - 12;
+          session = "PM";
+        }
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+        var time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innerText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+        setTimeout(showTime, 1000);
+    }
+    showTime();
     </script>
     <style>
+    /* WebKit and Opera browsers */
     @-webkit-keyframes spinner {
       from { -webkit-transform: rotateY(0deg);    }
       to   { -webkit-transform: rotateY(-360deg); }
     }
+    /* all other browsers */
     @keyframes spinner {
       from {
         -moz-transform: rotateY(0deg);
@@ -85,11 +119,17 @@
                 <a href="sentencestructure.html">Sentence Structure</a>
               </div>
           </div></li>
+          <li><div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn2">SPANISH</button>
+              <div id="myDropdown" class="dropdown-content2">
+                <a href="#">Stuff</a>
+              </div>
+          </div></li>
           <li><a href="mailto:eddiecasti280@gmail.com">Contact</a></li>
         </ul>
       </div>
     </div>
-    <div><p id="spinner" class="bottom-right"; style="font-size:800%;">ア</p></div>
+    <div><p id="spinner" class="bottom-right"; style="font-size:800%;">a</p></div>
     <style>
     .tooltip {
       position: relative;
@@ -114,9 +154,9 @@
       visibility: visible;
     }
     </style>
-    <h1><u style="font-size:90%;">Katakana Alphabet</u></h1>
+    <h1><u style="font-size:90%;">Spanish Keyboard Shortcuts</u></h1>
     <ul style="list-style-type:none;font-size:105%;">
-      <li align=center><div class="tooltip">ア<span class="tooltiptext">a</span></div>　<div class="tooltip">イ<span class="tooltiptext">i</span></div>　<div class="tooltip">ウ<span class="tooltiptext">u</span></div>　<div class="tooltip">エ<span class="tooltiptext">e [e]</span></div>　<div class="tooltip">オ<span class="tooltiptext">o [o]</span></div></li>
+      <li align=center><div class="tooltip">ア<span class="tooltiptext">a</span></div>　<div class="tooltip">イ<span class="tooltiptext">i</span></div>　<div class="tooltip">ウ<span class="tooltiptext">u</span></div>　<div class="tooltip">エ<span class="tooltiptext">e</span></div>　<div class="tooltip">オ<span class="tooltiptext">o</span></div></li>
       <li align=center><div class="tooltip">カ<span class="tooltiptext">ka</span></div>　<div class="tooltip">キ<span class="tooltiptext">ki</span></div>　<div class="tooltip">ク<span class="tooltiptext">ku</span></div>　<div class="tooltip">ケ<span class="tooltiptext">ke</span></div>　<div class="tooltip">コ<span class="tooltiptext">ko</span></div></li>
       <li align=center><div class="tooltip">サ<span class="tooltiptext">sa</span></div>　<div class="tooltip">シ<span class="tooltiptext">shi</span></div>　<div class="tooltip">ス<span class="tooltiptext">su</span></div>　<div class="tooltip">セ<span class="tooltiptext">se</span></div>　<div class="tooltip">ソ<span class="tooltiptext">so</span></div></li>
       <li align=center><div class="tooltip">タ<span class="tooltiptext">ta</span></div>　<div class="tooltip">チ<span class="tooltiptext">chi</span></div>　<div class="tooltip">ツ<span class="tooltiptext">tsu</span></div>　<div class="tooltip">テ<span class="tooltiptext">te</span></div>　<div class="tooltip">ト<span class="tooltiptext">to</span></div></li>

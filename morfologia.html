@@ -29,6 +29,115 @@
       });
     });
     </script>
+    <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 300px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      top:-5px;
+      left:120%;
+      margin-left:-60px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip .tooltiptext1 {
+      visibility: hidden;
+      width: 30px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      bottom:0%;
+      left:0%;
+      margin-left:-6px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip .tooltiptext2 {
+      visibility: hidden;
+      width: 300px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      top:-5px;
+      left:120%;
+      margin-left:0px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip .tooltiptext3 {
+      visibility: hidden;
+      width: 300px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      top:-5px;
+      left:120%;
+      margin-left:-10px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip .tooltiptext4 {
+      visibility: hidden;
+      width: 300px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      top:-5px;
+      left:120%;
+      margin-left:-30px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip .tooltiptext3 {
+      visibility: hidden;
+      width: 300px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      top:-5px;
+      left:120%;
+      margin-left:-5px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+    .tooltip:hover .tooltiptext1 {
+      visibility: visible;
+    }
+    .tooltip:hover .tooltiptext2 {
+      visibility: visible;
+    }
+    .tooltip:hover .tooltiptext3 {
+      visibility: visible;
+    }
+    .tooltip:hover .tooltiptext4 {
+      visibility: visible;
+    }
+    .tooltip:hover .tooltiptext5 {
+      visibility: visible;
+    }
+    </style>
     <div id="header">
       <div class="container">
         <a id="header-title" href="index.html" style="color:#CBFFFA">ぎんこう</a>
@@ -101,72 +210,99 @@
           </div>
         </div>
       </div>
+    </div>
+    <ul style="list-style-type:none;font-size:175%">
+      <li><div class="tooltip">Los dos tipos de afijos son...<span class="tooltiptext">derivativos y flexivos</span></div></li>
+      <li class="indent">Se usan los primeros con verbos, sustantivos y adjetivos para indicar conceptos como tiempo, modo, persona, número y genero.</li>
+      <li class="indent">Ejemplo: En "perros", <div class="tooltip">...<span class="tooltiptext1">s</span></div> indica que es plural.</li>
+      <br>
+      <li>En cambio los afijos derivativos sirven para crear grupos de palabras de distintas clases gramaticales. Se puede crear adverbios de adjetivos al agregar "-mente:"</li>
+      <li class="indent">Ejemplo: <div class="tooltip">lento<span class="tooltiptext2">lentamente</span></div></li>
+      <br>
+      <li>Se puede formar nuevas palabras al combinar dos palabras. La palabra resultante es una <div class="tooltip">palabra...<span class="tooltiptext3">compuesta</span></div></li>
+      <li class="indent">El proceso se llama la... <div class="tooltip">...<span class="tooltiptext4">composición</span></div></li>
+      <li>Los sustantivos y los adjetivos también pueden llevar morfemas que indican...</li>
+      <li class="indent">-<div class="tooltip">género<span class="tooltiptext3">masculino o femenino</span></div></li>
+      <li class="indent">-<div class="tooltip">número<span class="tooltiptext3">singular o plural</span></div></li>
+      <br>
+      <li>La categoría gramatical que tiene más flexiones es <div class="tooltip">el...<span class="tooltiptext3">verbo</span></div></li>
+    </ul>
+    <div class="grid-container1">
       <div class="grid-item">
         <div class="maincontainer">
           <div class="thecard">
-            <div class="thefront" style="font-size:700%;">へ</div>
+            <div class="thefront" style="font-size:250%;"><br><br>Verbo Ideal</div>
             <div class="theback">
               <br>
-              <div class="jp japanese_gothic furigana_enabled">
-                <span class="word" title="indicator">
-                  <span class="kanji" data-reading="にほん">日本</span>へ<span class="kanji" data-reading="い">行</span>きます。</div>
-                  <br>
-                  <br>I will go to Japan.
-                </div>
+              <div style="font-size:150%">Tiene cuatro morfemas: la raíz, la vocal tematica, el marcador de tiempo, aspecto y modo (TAM), el marcador de persona y número.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:250%;"><br><br>Desinencia</div>
+            <div class="theback">
+              <br>
+              <div style="font-size:150%">Flexión, una morfema que se anade al verbo.</div>
               </div>
             </div>
           </div>
+        </div>
       <div class="grid-item">
         <div class="maincontainer">
           <div class="thecard">
-            <div class="thefront" style="font-size:700%;">で</div>
-            <div class="theback">
-              <br>
-              <div class="jp japanese_gothic furigana_enabled">
-                <span class="word" title="noun">
-                  メキシカンレストランでタコスを<span class="kanji" data-reading="た">食</span>べます。</span><font color="ffffff">へ</font><span class="word" title="verb"><span class="kanji"　data-reading="い">行</span>きました。</span></div><br><br>I went to the movie theater.</div></div></div></div>
-      <div class="grid-item">
-        <div class="maincontainer">
-          <div class="thecard">
-            <div class="thefront" style="font-size:700%;">を</div>
-            <div class="theback">
-              <br>Indicates object associated with a verb.
-              <br>
-              <br>
-              <br>-Example-
-              <br>アイスクリーム<font color="ffffff">を</font>
-              <div class="jp japanese_gothic furigana_enabled">
-                <span class="word" title="verb">
-                  <span class="kanji" data-reading="た">食</span>べました。</div><br><br>I ate icecream.</div></div></div></div>
-      <div class="grid-item">
-        <div class="maincontainer">
-          <div class="thecard">
-            <div class="thefront" style="font-size:700%;">と</div>
+            <div class="thefront" style="font-size:250%;"><br><br>Tiempos Simples</div>
               <div class="theback">
-                <br>Indicates noun linkage.
                 <br>
+                <div style="font-size:150%">Verbos de una sola palabra.</div>
                 <br>
-                <br>
-                <br>-Example-
-                <br>スパゲッティ<font color="ffffff">と</font>パンを食べます。
-                <br>
-                <br>I eat spaghetti and bread.</div></div></div></div>
+                <div style="font-size:150%">Ejemplo: camino</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="grid-item">
+        <div class="maincontainer">
+          <div class="thecard">
+            <div class="thefront" style="font-size:250%;"><br><br>Tiempos Compuestos</div>
+            <div class="theback">
+              <br>
+              <div style="font-size:150%">Verbos de dos palabras.</div>
+              <br>
+              <div style="font-size:150%">Ejemplo: he caminado</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <p style="text-align:center; font-size:120%"">Where do you place your sentence markers? Learn more <a href="sentencestructure.html">here!</a><img src="ScholarTonberry3.png" height="30" width="30"></p>
+    <ul style="list-style-type:none;font-size:175%">
+      <li>Vocales Tematicas (VT)</li>
+      <li class="indent">-<div class="tooltip">primera conjugación<span class="tooltiptext3">a</span></div></li>
+      <li class="indent">-<div class="tooltip">segunda conjugación<span class="tooltiptext3">e</span></div></li>
+      <li class="indent">-<div class="tooltip">tercera conjugación<span class="tooltiptext3">i</span></div></li>
+      <br>
+      <li>Tiempo, Aspecto y Modo (TAM)</li>
+      <li class="indent">-<div class="tooltip">Tiempo<span class="tooltiptext3">Presente, pasado y futuro.</span></div></li>
+      <li class="indent">-<div class="tooltip">Aspecto<span class="tooltiptext3">Presente simple, presente progresivo, preterito, etc.</span></div></li>
+      <li class="indent">-<div class="tooltip">Modo<span class="tooltiptext3">Contiene indicativo, subjuntivo, condicional, y el imperativo</span></div></li>
+      <br>
+      <li>Persona y Número (PN)</li>
+      <li class="indent">-<div class="tooltip">Morfemas de persona y número:<span class="tooltiptext3">-s, -mos, -n</span></div></li>
+    </ul>
     <div id="footer">
       <div class="container">
         <div class="column">
-          <h4>My Links</h4>
+          <h4>Links</h4>
           <p>
-            <a href="https://twitter.com/datboi_eddie">Twitter</a>
-            <br>
-            <a href="https://www.youtube.com/channel/UCD5Wt15r9LN1gbI_qgMGzcQ?view_as=subscriber">YouTube</a>
+            <a href="https://padlet.com/eddiecasti280/eddiecasti280">Padlet</a>
           </p>
         </div>
         <div class="column">
-          <h4>My Story</h4>
+          <h4>Currently Working On...</h4>
           <p>
-            Hi there! Please feel free to look around my website to see what I'm up to!
+            Building the vocabulary database and creating review materials for SPN330L.
           </p>
         </div>
       </div>

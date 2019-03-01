@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ぎんこう</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    <style>
+    /* WebKit and Opera browsers */
+    @-webkit-keyframes spinner {
+      from { -webkit-transform: rotateY(0deg);    }
+      to   { -webkit-transform: rotateY(-360deg); }
+    }
+    /* all other browsers */
+    @keyframes spinner {
+      from {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+      }
+      to {
+        -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+      }
+    }
+    #stage {
+        margin: 1em auto;
+        -webkit-perspective: 1200px;
+        -moz-perspective: 1200px;
+        -ms-perspective: 1200px;
+        perspective: 1200px;
+      }
+    #spinner {
+      -webkit-animation-name: spinner;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-duration: 18s;
+
+      animation-name: spinner;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-duration: 18s;
+
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+
+    #spinner:hover {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+  </style>
+    <div id="header">
+      <div class="container">
+        <a id="header-title" href="index.html" style="color:#CBFFFA">ぎんこう</a>
+        <ul id="header-nav">
+          <li><a href="about.html">About</a></li>
+          <li><div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">JAPANESE</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="japanesevocabulary.html">Vocabulary</a>
+                <a href="katakanaalpha.html">Katakana Alphabet</a>
+                <a href="hiraganaalpha.html">Hiragana Alphabet</a>
+                <a href="particle.html">Particles</a>
+                <a href="sentencestructure.html">Sentence Structure</a>
+              </div>
+          </div></li>
+          <li><a href="mailto:eddiecasti280@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div><p id="spinner" class="bottom-right"; style="font-size:800%;">い</p></div>
+    <div><p id="spinner" class="bottom-right"; style="font-size:800%;">な</p></div>
+    <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      bottom:100%;
+      left:50%;
+      margin-left:-60px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+    </style>
+    <h1><u style="font-size:90%;">い Adjectives</u></h1>
+    <ul style="list-style-type:none;font-size:105%;">
+      <li align=center><div class="tooltip"><div class="jp japanese_gothic furigana_enabled"><span class="word" title="adjective"><span class="kanji" data-reading="おお">大</span>きい</div><span class="tooltiptext">Big</span></div></li>
+      <li align=center><div class="tooltip">ちいさい<span class="tooltiptext">Small</span></div></li>
+      <li align=center><div class="tooltip">おもしろい<span class="tooltiptext">Humorous, interesting</span></div></li>
+      <li align=center><div class="tooltip">つまらない<span class="tooltiptext">Boring</span></div></li>
+      <li align=center><div class="tooltip">まずい<span class="tooltiptext">Not tasty</span></div></li>
+      <li align=center><div class="tooltip">わるい<span class="tooltiptext">Bad</span></div></li>
+      <li align=center><div class="tooltip">うるさい<span class="tooltiptext">Noisy</span></div></li>
+      <li align=center><div class="tooltip">いそがしい<span class="tooltiptext">Busy</span></div></li>
+      <li align=center><div class="tooltip">しろい<span class="tooltiptext">White</span></div></li>
+      <li align=center><div class="tooltip">きたない<span class="tooltiptext">Dirty</span></div></li>
+      <li align=center><div class="tooltip">たかい<span class="tooltiptext">Tall, expensive</span></div></li>
+      <li align=center><div class="tooltip">ひくい<span class="tooltiptext">Short</span></div></li>
+    <h1><u style="font-size:90%;">な Adjectives</u></h1>
+    </ul>
+    <div id="footer">
+      <div class="container">
+        <div class="column">
+          <h4>My Links</h4>
+          <p>
+            <a href="https://twitter.com/datboi_eddie">Twitter</a>
+            <br>
+            <a href="https://www.youtube.com/channel/UCD5Wt15r9LN1gbI_qgMGzcQ?view_as=subscriber">YouTube</a>
+          </p>
+        </div>
+        <div class="column">
+          <h4>My Story</h4>
+          <p>
+            Hi there! Please feel free to look around my website to see what I'm up to!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -5,36 +5,47 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
     <div id="header">
       <div class="container">
         <a id="header-title" href="index.html" style="color:#CBFFFA">ぎんこう</a>
         <ul id="header-nav">
           <li><a href="about.html">About</a></li>
-          <li><a href="japanesevocabulary.html">Japanese</a></li>
+          <li><div class="dropdown">
+            <button onmouseover="myFunction()" class="dropbtn">JAPANESE</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="japanesevocabulary.html">Vocabulary</a>
+                <a href="katakanaalpha.html">Katakana Alphabet</a>
+                <a href="hiraganaalpha.html">Hiragana Alphabet</a>
+                <a href="particle.html">Particles</a>
+                <a href="sentencestructure.html">Sentence Structure</a>
+              </div>
+          </div></li>
           <li><a href="mailto:eddiecasti280@gmail.com">Contact</a></li>
         </ul>
       </div>
     </div>
     <h1><u style="font-size:90%;">Japanese</u></h1>
     <ul style="list-style-type:none;font-size:105%;">
-      <li>Vocabulary</li>
-      <ul><li><a href="Kanji.html">Verbs</a></li></ul>
-      <ul><li><a href="Kanji.html">Adjectives</a></li></ul>
-      <ul><li><a href="Kanji.html">Adverbs</a></li></ul>
-      <ul><li>Nouns</li>
-        <ul>
-          <li><a href="school.html">School</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="animals.html">Animals</a></li>
-          <li><a href="nationalities.html">Nationalities</a></li>
-          <li><a href="weather.html">Weather</a></li>
-          <li><a href="numbers.html">Numbers and Counters</a></li>
-        </ul></ul>
-      <li>Alphabets</li>
-      <ul><li><a href="hiraganaalpha.html">Hiragana</a></li></ul>
-      <ul><li><a href="katakanaalpha.html">Katakana</a></li></ul>
-      <li><a href="particle.html">Particles</a></li>
-      <li><a href="sentencestructure.html">Sentence Structure</a></li>
+
     </ul>
     <div id="footer">
       <div class="container">

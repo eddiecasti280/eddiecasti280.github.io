@@ -27,9 +27,116 @@
                 <a href="home.html#customs" class="btn btn-ghost">Customs</a>
             </div>
         </nav>
-        <main class="max-w-3xl mx-auto px-4 py-10">
-            <h1 class="text-3xl font-bold text-center">Basic Kanji</h1>
-            <p class="text-center opacity-60 italic">Coming soon...</p>
+        <header class="text-center py-10 px-4">
+            <div class="flex items-center justify-center gap-4 mb-3">
+                <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#16A34A; color:#16A34A;">本</span>
+                <h1 class="text-3xl font-bold">Basic Kanji</h1>
+            </div>
+            <p class="opacity-70 mb-8">Browse common kanji grouped by topic.</p>
+            <div class="flex flex-wrap justify-center gap-2">
+                <a href="#numbers" class="btn btn-primary">Numbers</a>
+                <a href="#animals" class="btn btn-primary">Animals</a>
+                <a href="#people" class="btn btn-primary">People</a>
+                <a href="#time" class="btn btn-primary">Time</a>
+            </div>
+        </header>
+        <main class="max-w-3xl mx-auto px-4 pb-16 flex flex-col gap-8">
+            <!-- ================= NUMBERS ================= -->
+            <section id="numbers" class="scroll-mt-20">
+                <h2 class="text-2xl font-bold mb-3">Numbers</h2>
+                <div class="flex flex-col gap-4">
+                    <!-- KANJI ENTRY -->
+                    <div class="card bg-base-100 shadow-sm p-6 flex-row items-center gap-6">
+                        <div class="kanji-char"></div>
+                        <div class="flex-1 flex flex-col gap-2">
+                            <div>
+                                <div class="kanji-label">Meaning</div>
+                                <div class="kanji-value">one</div>
+                            </div>
+                            <div>
+                                <div class="kanji-label">Kun Reading</div>
+                                <div class="kanji-value"></div>
+                            </div>
+                            <div>
+                                <div class="kanji-label">On Reading</div>
+                                <div class="kanji-value"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ================= ANIMALS ================= -->
+            <section id="animals" class="scroll-mt-20">
+                <h2 class="text-2xl font-bold mb-3">Animals</h2>
+                <div class="flex flex-col gap-4">
+                    <!-- KANJI ENTRY -->
+                    <div class="card bg-base-100 shadow-sm p-6 flex-row items-center gap-6">
+                        <div class="kanji-char"></div>
+                        <div class="flex-1 flex flex-col gap-2">
+                            <div>
+                                <div class="kanji-label">Meaning</div>
+                                <div class="kanji-value">dog</div>
+                            </div>
+                            <div>
+                                <div class="kanji-label">Kun Reading</div>
+                                <div class="kanji-value"></div>
+                            </div>
+                            <div>
+                                <div class="kanji-label">On Reading</div>
+                                <div class="kanji-value"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ================= PEOPLE ================= -->
+            <section id="people" class="scroll-mt-20">
+                <h2 class="text-2xl font-bold mb-3">People</h2>
+                <div class="flex flex-col gap-4">
+                    <!-- KANJI ENTRY -->
+                    <div class="card bg-base-100 shadow-sm p-6 flex-row items-center gap-6">
+                        <div class="kanji-char"></div>
+                        <div class="flex-1 flex flex-col gap-2">
+                            <div>
+                                <div class="kanji-label">Meaning</div>
+                                <div class="kanji-value">person</div>
+                            </div>
+                            <div>
+                                <div class="kanji-label">Kun Reading</div>
+                                <div class="kanji-value"></div>
+                            </div>
+                            <div>
+                                <div class="kanji-label">On Reading</div>
+                                <div class="kanji-value"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ================= TIME ================= -->
+            <section id="time" class="scroll-mt-20">
+                <h2 class="text-2xl font-bold mb-3">Time</h2>
+                <div class="flex flex-col gap-4">
+                    <!-- KANJI ENTRY -->
+                    <div class="card bg-base-100 shadow-sm p-6 flex-row items-center gap-6">
+                        <div class="kanji-char"></div>
+                        <div class="flex-1 flex flex-col gap-2">
+                            <div>
+                                <div class="kanji-label">Meaning</div>
+                                <div class="kanji-value">day</div>
+                            </div>
+                            <div>
+                                <div class="kanji-label">Kun Reading</div>
+                                <div class="kanji-value"></div>
+                            </div>
+                            <div>
+                                <div class="kanji-label">On Reading</div>
+                                <div class="kanji-value"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>

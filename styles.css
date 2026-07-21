@@ -761,6 +761,9 @@
   .w-40 {
     width: calc(var(--spacing) * 40);
   }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
   }
@@ -802,6 +805,9 @@
   }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -1006,6 +1012,25 @@
   }
   .kana:hover .kana-tip, .kana:focus-visible .kana-tip {
     opacity: 1;
+  }
+  .kanji-char {
+    font-family: "Noto Sans JP", var(--font-sans);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    min-width: 4.5rem;
+    text-align: center;
+  }
+  .kanji-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .kanji-value {
+    font-family: "Noto Sans JP", var(--font-sans);
+    min-height: 1.5rem;
   }
 }
 @layer base {

@@ -33,16 +33,16 @@
                 <h1 class="text-3xl font-bold">Basic Kanji</h1>
             </div>
             <p class="opacity-70 mb-8">Browse common kanji grouped by topic.</p>
-            <div class="flex flex-wrap justify-center gap-2">
-                <a href="#numbers" class="btn btn-primary">Numbers</a>
-                <a href="#animals" class="btn btn-primary">Animals</a>
-                <a href="#people" class="btn btn-primary">People</a>
-                <a href="#time" class="btn btn-primary">Time</a>
+            <div class="flex flex-wrap justify-center gap-2" id="kanji-tabs">
+                <button type="button" class="btn btn-primary" data-topic="numbers">Numbers</button>
+                <button type="button" class="btn btn-primary" data-topic="animals">Animals</button>
+                <button type="button" class="btn btn-primary" data-topic="people">People</button>
+                <button type="button" class="btn btn-primary" data-topic="time">Time</button>
             </div>
         </header>
         <main class="max-w-3xl mx-auto px-4 pb-16 flex flex-col gap-8">
             <!-- ================= NUMBERS ================= -->
-            <section id="numbers" class="scroll-mt-20">
+            <section id="numbers" class="kanji-topic">
                 <h2 class="text-2xl font-bold mb-3">Numbers</h2>
                 <div class="flex flex-col gap-4">
                     <!-- KANJI ENTRY -->
@@ -66,7 +66,7 @@
                 </div>
             </section>
             <!-- ================= ANIMALS ================= -->
-            <section id="animals" class="scroll-mt-20">
+            <section id="animals" class="kanji-topic">
                 <h2 class="text-2xl font-bold mb-3">Animals</h2>
                 <div class="flex flex-col gap-4">
                     <!-- KANJI ENTRY -->
@@ -90,7 +90,7 @@
                 </div>
             </section>
             <!-- ================= PEOPLE ================= -->
-            <section id="people" class="scroll-mt-20">
+            <section id="people"  class="kanji-topic">
                 <h2 class="text-2xl font-bold mb-3">People</h2>
                 <div class="flex flex-col gap-4">
                     <!-- KANJI ENTRY -->
@@ -114,7 +114,7 @@
                 </div>
             </section>
             <!-- ================= TIME ================= -->
-            <section id="time" class="scroll-mt-20">
+            <section id="time"    class="kanji-topic">
                 <h2 class="text-2xl font-bold mb-3">Time</h2>
                 <div class="flex flex-col gap-4">
                     <!-- KANJI ENTRY -->
@@ -138,5 +138,16 @@
                 </div>
             </section>
         </main>
+        <script>
+            const tabs = document.querySelectorAll('#kanji-tabs button');
+            const topics = document.querySelectorAll('.kanji-topic');
+            function showTopic(name) {
+                topics.forEach(s => s.hidden = (s.id !== name));
+                tabs.forEach(b => b.classList.toggle('btn-active', b.dataset.topic === name));
+            }
+            tabs.forEach(b => b.addEventListener('click', () => showTopic(b.dataset.topic)));
+            // default view
+            showTopic('numbers');
+        </script>
     </body>
 </html>

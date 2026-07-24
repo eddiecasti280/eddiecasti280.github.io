@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body class="min-h-screen bg-base-200 flex flex-col">
-        <nav class="navbar bg-base-100 shadow-sm px-6 md:px-12">
+        <nav class="site-nav navbar bg-base-100 shadow-sm px-6 md:px-12 sticky top-0 z-50">
             <div class="flex-1">
                 <a href="index.html" class="font-display text-xl font-bold">Japanese Language and Travel Site</a>
             </div>
@@ -33,7 +33,7 @@
                 <a href="about.html" class="btn btn-ghost">About</a>
             </div>
         </nav>
-
+        <div class="page-fade">
         <div class="flex-1 flex items-center justify-center px-6 py-16">
             <div class="max-w-2xl w-full mx-auto text-center">
                 <img
@@ -46,5 +46,7 @@
                 <a href="home.html" class="btn btn-primary btn-lg">Enter Site</a>
             </div>
         </div>
+        </div>
+        <script src="src/transition.js"></script>
     </body>
 </html>

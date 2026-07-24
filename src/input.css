@@ -3,6 +3,50 @@
   themes: retro --default;
 }
 
+/* Cross-document fade between pages (Chrome/Edge; degrades gracefully) */
+@view-transition {
+  navigation: auto;
+}
+@layer base {
+  /* The navbar is carried across navigations as the same element,
+     so it doesn't flicker or re-fade. */
+  .site-nav {
+    view-transition-name: site-nav;
+  }
+  /* Everything that isn't the navbar fades */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.28s;
+    animation-timing-function: ease-in-out;
+  }
+  /* Hold the navbar perfectly still */
+  ::view-transition-group(site-nav) {
+    animation-duration: 0s;
+  }
+  ::view-transition-old(site-nav),
+  ::view-transition-new(site-nav) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation: none;
+    }
+  }
+}
+@layer components {
+  /* JS fallback fade for browsers without cross-document view transitions */
+  .page-fade {
+    animation: page-in 0.28s ease-in-out both;
+  }
+  .page-fade.is-leaving {
+    animation: page-out 0.2s ease-in-out both;
+  }
+  @keyframes page-in  { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes page-out { from { opacity: 1; } to { opacity: 0; } }
+}
+
 @layer components {
   .symbol-badge {
     display: inline-flex;

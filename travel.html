@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="retro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="min-h-screen bg-base-200">
+        <nav class="navbar bg-base-100 shadow-sm px-6 md:px-12">
+            <div class="flex-1">
+                <a href="index.html" class="font-display text-xl font-bold">Japanese Language and Travel Site</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost">Language</div>
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-10 w-40 p-2 shadow-sm">
+                        <li><a href="hiragana_syllabary.html">Hiragana</a></li>
+                        <li><a href="katakana_syllabary.html">Katakana</a></li>
+                        <li><a href="basic_kanji.html">Kanji</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost">Culture</div>
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-10 w-40 p-2 shadow-sm">
+                        <li><a href="travel.html">Travel</a></li>
+                        <li><a href="customs.html">Customs</a></li>
+                    </ul>
+                </div>
+                <a href="about.html" class="btn btn-ghost">About</a>
+            </div>
+        </nav>
+        <header class="text-center py-10 px-4">
+            <div class="flex items-center justify-center gap-4 mb-3">
+                <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#0D9488; color:#0D9488;">T</span>
+                <h1 class="text-3xl font-bold">Travel</h1>
+            </div>
+            <p class="opacity-70">Points of interest worth planning a trip around.</p>
+        </header>
+        <main class="max-w-3xl mx-auto px-4 pb-16">
+            <ul class="flex flex-col gap-6">
+                <!-- DESTINATION -->
+                <li class="card bg-base-100 shadow-sm p-6">
+                    <h2 class="text-xl font-semibold">Kyoto — Fushimi Inari Taisha</h2>
+                    <p class="opacity-70">A Shinto shrine at the base of Mount Inari, famous for the thousands of vermilion torii gates lining its mountain trails.</p>
+                    <ul class="flex flex-col gap-1 text-sm">
+                        <li><a class="link" href="https://inari.jp/en/" target="_blank" rel="noopener">Official Shrine Site</a> — visiting hours, history, and festival calendar.</li>
+                    </ul>
+                </li>
+                <!-- DESTINATION -->
+                <li class="card bg-base-100 shadow-sm p-6">
+                    <h2 class="text-xl font-semibold">Nara — Nara Park</h2>
+                    <p class="opacity-70">A sprawling park where freely roaming sika deer mingle with visitors, surrounded by some of Japan's oldest temples.</p>
+                    <ul class="flex flex-col gap-1 text-sm">
+                        <li><a class="link" href="https://www3.pref.nara.jp/park/" target="_blank" rel="noopener">Nara Park Guide</a> — maps, deer etiquette, and access info.</li>
+                        <li><a class="link" href="https://www.todaiji.or.jp/en/" target="_blank" rel="noopener">Tōdai-ji Temple</a> — home of the Great Buddha, inside the park.</li>
+                    </ul>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>

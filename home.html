@@ -23,13 +23,19 @@
                         <li><a href="basic_kanji.html">Kanji</a></li>
                     </ul>
                 </div>
-                <a href="#travel" class="btn btn-ghost">Travel</a>
-                <a href="#customs" class="btn btn-ghost">Customs</a>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost">Culture</div>
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-10 w-40 p-2 shadow-sm">
+                        <li><a href="travel.html">Travel</a></li>
+                        <li><a href="customs.html">Customs</a></li>
+                    </ul>
+                </div>
+                <a href="about.html" class="btn btn-ghost">About</a>
             </div>
         </nav>
         <header class="text-center py-10 px-4">
             <h1 class="text-3xl font-bold mb-2">Japanese Language and Travel Site</h1>
-            <p class="opacity-70 mb-8">Welcome! This page is under construction.</p>
+            <p class="opacity-70 mb-8">Welcome! Explore the writing systems, then the places and practices behind them.</p>
             <div class="flex flex-wrap justify-center gap-8">
                 <a href="hiragana_syllabary.html" class="flex flex-col items-center gap-2">
                     <span class="symbol-badge w-14 h-14 text-2xl border-4" style="border-color:#DC2626; color:#DC2626;">あ</span>
@@ -43,74 +49,71 @@
                     <span class="symbol-badge w-14 h-14 text-2xl border-4" style="border-color:#16A34A; color:#16A34A;">本</span>
                     <span class="text-sm font-semibold">Kanji</span>
                 </a>
-                <a href="#travel" class="flex flex-col items-center gap-2">
+                <a href="travel.html" class="flex flex-col items-center gap-2">
                     <span class="symbol-badge w-14 h-14 text-2xl border-4" style="border-color:#0D9488; color:#0D9488;">T</span>
                     <span class="text-sm font-semibold">Travel</span>
                 </a>
-                <a href="#customs" class="flex flex-col items-center gap-2">
+                <a href="customs.html" class="flex flex-col items-center gap-2">
                     <span class="symbol-badge w-14 h-14 text-2xl border-4" style="border-color:#D97706; color:#D97706;">C</span>
                     <span class="text-sm font-semibold">Customs</span>
                 </a>
             </div>
         </header>
-        <main class="max-w-3xl mx-auto px-4 pb-16 flex flex-col gap-8">
-            <section id="hiragana" class="card bg-base-100 shadow-sm p-6 scroll-mt-20">
-                <div class="flex items-center gap-4 mb-3">
-                    <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#DC2626; color:#DC2626;">あ</span>
-                    <h2 class="text-2xl font-bold">Hiragana</h2>
+        <main class="max-w-3xl mx-auto px-4 pb-16 flex flex-col gap-12">
+            <!-- ================= LANGUAGE ================= -->
+            <div id="language" class="scroll-mt-20">
+                <h2 class="text-3xl font-bold text-center">Language</h2>
+                <p class="text-center opacity-70 mb-8">The three scripts that make up written Japanese.</p>
+                <div class="flex flex-col gap-6">
+                    <section class="card bg-base-100 shadow-sm p-6">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#DC2626; color:#DC2626;">あ</span>
+                            <h3 class="text-2xl font-bold">Hiragana</h3>
+                        </div>
+                        <p class="opacity-70">The basic phonetic script used for native Japanese words and grammatical endings. Start here.</p>
+                        <a href="hiragana_syllabary.html" class="btn btn-primary w-fit">View the Hiragana Syllabary</a>
+                    </section>
+                    <section class="card bg-base-100 shadow-sm p-6">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#7C3AED; color:#7C3AED;">ア</span>
+                            <h3 class="text-2xl font-bold">Katakana</h3>
+                        </div>
+                        <p class="opacity-70">The companion phonetic script, used mainly for loanwords, names, and emphasis.</p>
+                        <a href="katakana_syllabary.html" class="btn btn-primary w-fit">View the Katakana Syllabary</a>
+                    </section>
+                    <section class="card bg-base-100 shadow-sm p-6">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#16A34A; color:#16A34A;">本</span>
+                            <h3 class="text-2xl font-bold">Kanji</h3>
+                        </div>
+                        <p class="opacity-70">Logographic characters borrowed from Chinese, grouped here by everyday topics with readings.</p>
+                        <a href="basic_kanji.html" class="btn btn-primary w-fit">View Basic Kanji</a>
+                    </section>
                 </div>
-                <p class="opacity-70">The basic phonetic script used for native Japanese words and grammar.</p>
-                <a href="hiragana_syllabary.html" class="btn btn-primary w-fit">View the Hiragana Syllabary</a>
-            </section>
-            <section id="katakana" class="card bg-base-100 shadow-sm p-6 scroll-mt-20">
-                <div class="flex items-center gap-4 mb-3">
-                    <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#7C3AED; color:#7C3AED;">ア</span>
-                    <h2 class="text-2xl font-bold">Katakana</h2>
+            </div>
+            <!-- ================= CULTURE ================= -->
+            <div id="culture" class="scroll-mt-20">
+                <h2 class="text-3xl font-bold text-center">Culture</h2>
+                <p class="text-center opacity-70 mb-8">Where to go, and how to be a good guest once you're there.</p>
+                <div class="flex flex-col gap-6">
+                    <section class="card bg-base-100 shadow-sm p-6">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#0D9488; color:#0D9488;">T</span>
+                            <h3 class="text-2xl font-bold">Travel</h3>
+                        </div>
+                        <p class="opacity-70">Points of interest worth planning a trip around, with links to official guides and sites.</p>
+                        <a href="travel.html" class="btn btn-primary w-fit">Explore Destinations</a>
+                    </section>
+                    <section class="card bg-base-100 shadow-sm p-6">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#D97706; color:#D97706;">C</span>
+                            <h3 class="text-2xl font-bold">Customs</h3>
+                        </div>
+                        <p class="opacity-70">Everyday etiquette and traditions — from shoes and shrines to dining manners.</p>
+                        <a href="customs.html" class="btn btn-primary w-fit">Read About Customs</a>
+                    </section>
                 </div>
-                <p class="opacity-70">The companion phonetic script, used mainly for loanwords and emphasis.</p>
-                <a href="katakana_syllabary.html" class="btn btn-primary w-fit">View the Katakana Syllabary</a>
-            </section>
-            <section id="kanji" class="card bg-base-100 shadow-sm p-6 scroll-mt-20">
-                <div class="flex items-center gap-4 mb-3">
-                    <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#16A34A; color:#16A34A;">本</span>
-                    <h2 class="text-2xl font-bold">Kanji</h2>
-                </div>
-                <p class="opacity-70">Logographic characters borrowed from Chinese, grouped here by everyday topics.</p>
-                <a href="basic_kanji.html" class="btn btn-primary w-fit">View Basic Kanji</a>
-            </section>
-            <section id="travel" class="card bg-base-100 shadow-sm p-6 scroll-mt-20">
-                <div class="flex items-center gap-4 mb-3">
-                    <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#0D9488; color:#0D9488;">T</span>
-                    <h2 class="text-2xl font-bold">Travel</h2>
-                </div>
-                <p class="opacity-70">Points of interest worth planning a trip around.</p>
-                <ul class="flex flex-col gap-6">
-                    <!-- DESTINATION -->
-                    <li>
-                        <h3 class="text-xl font-semibold">Kyoto — Fushimi Inari Taisha</h3>
-                        <p class="opacity-70">A Shinto shrine at the base of Mount Inari, famous for the thousands of vermilion torii gates lining its mountain trails.</p>
-                        <ul class="flex flex-col gap-1 text-sm">
-                            <li><a class="link" href="https://inari.jp/en/" target="_blank" rel="noopener">Official Shrine Site</a> — visiting hours, history, and festival calendar.</li>
-                        </ul>
-                    </li>
-                    <!-- DESTINATION -->
-                    <li>
-                        <h3 class="text-xl font-semibold">Nara — Nara Park</h3>
-                        <p class="opacity-70">A sprawling park where freely roaming sika deer mingle with visitors, surrounded by some of Japan's oldest temples.</p>
-                        <ul class="flex flex-col gap-1 text-sm">
-                            <li><a class="link" href="https://www3.pref.nara.jp/park/" target="_blank" rel="noopener">Nara Park Guide</a> — maps, deer etiquette, and access info.</li>
-                            <li><a class="link" href="https://www.todaiji.or.jp/en/" target="_blank" rel="noopener">Tōdai-ji Temple</a> — home of the Great Buddha, inside the park.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section id="customs" class="card bg-base-100 shadow-sm p-6 scroll-mt-20">
-                <div class="flex items-center gap-4 mb-3">
-                    <span class="symbol-badge w-12 h-12 text-xl border-4" style="border-color:#D97706; color:#D97706;">C</span>
-                    <h2 class="text-2xl font-bold">Customs</h2>
-                </div>
-                <p class="opacity-60 italic">Coming soon...</p>
-            </section>
+            </div>
         </main>
     </body>
 </html>
